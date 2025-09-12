@@ -1,0 +1,123 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #701C1C;
+    color: #F0EAD6;
+}
+
+h2 {
+    color: #F0EAD6;
+    margin-bottom: 12px;
+}
+
+.student-count {
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.btn {
+    display: inline-block;
+    padding: 7px 14px;
+    margin-right: 10px;
+    background-color: #F0EAD6;
+    color: #701C1C;
+    text-decoration: none;
+    border-radius: 3px;
+    font-size: 14px;
+    /* Removed transition for a more straightforward feel */
+}
+
+.btn:hover {
+    background-color: #e6dfc9;
+}
+
+.btn-primary {
+    background-color: #C5A880;
+}
+
+.btn-primary:hover {
+    background-color: #a48b69;
+}
+
+form {
+    margin: 15px 0;
+}
+
+form input[type="text"] {
+    padding: 6px 10px;
+    font-size: 14px;
+    border: 1px solid #2a1f1f;
+    border-radius: 3px;
+    width: 200px;
+    margin-right: 8px;
+    background-color: #f9f5e9;
+    color: #4a2f2f;
+    box-sizing: border-box;
+}
+
+form button {
+    padding: 6px 12px;
+    font-size: 14px;
+    background-color: #F0EAD6;
+    color: #701C1C;
+    border: 1px solid #a48b69;
+    border-radius: 3px;
+    cursor: pointer;
+    /* Removed transition for a more straightforward feel */
+}
+
+form button:hover {
+    background-color: #e6dfc9;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #C5A880;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+}
+
+table th, table td {
+    padding: 10px 12px;
+    text-align: left;
+    border-bottom: 1px solid #b8a77a;
+}
+
+table th {
+    background-color: #b39b6a;
+    font-weight: 600;
+}
+
+table tr:hover {
+    background-color: #d9d1b8;
+}
+
+table a {
+    color: #4a1a1a;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+table a:hover {
+    text-decoration: underline;
+}
+
+div.pagination {
+    margin-top: 20px;
+    text-align: center;
+}
+
+div.pagination a {
+    margin: 0 5px;
+    padding: 6px 12px;
+    background-color: #F0EAD6;
+    color: #701C1C;
+    text-decoration: none;
+    border-radius: 3px;
+    font-size: 14px;
+    border: 1px solid #a48b69;
+}
+
+div.pagination a:hover {
+    background-color: #e6dfc9;
+}
