@@ -3,8 +3,8 @@
 
 <head>
   <title>Update Student</title>
-  <?php load_css(['css/style']); ?>
-    <?php load_css(['css/update']); ?>
+  <link rel="stylesheet" href="<?= base_url() ?>public/css/style.css">
+  <link rel="stylesheet" href="<?= base_url() ?>public/css/update.css">
 </head>
 
 <body>
