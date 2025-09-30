@@ -8,6 +8,10 @@ class StudentsController extends Controller
         parent::__construct();
         $this->call->model('StudentsModel');
         $this->call->library('pagination');
+        $this->call->library('session');
+
+        // Check if user is logged in for all methods
+        $this->require_auth();
 
         $this->pagination->set_theme('custom');
         $this->pagination->set_custom_classes([
@@ -17,7 +21,36 @@ class StudentsController extends Controller
             'a' => 'pagination-link',
             'active' => 'active'
         ]);
+    }
 
+    /**
+     * Check if user is authenticated, redirect to login if not
+     */
+    private function require_auth()
+    {
+        if (!$this->is_logged_in()) {
+            redirect('/login');
+        }
+    }
+
+    /**
+     * Check if user is logged in
+     */
+    private function is_logged_in()
+    {
+        return $this->session->userdata('logged_in') === true;
+    }
+
+    /**
+     * Get current logged in user data
+     */
+    private function get_current_user()
+    {
+        return [
+            'id' => $this->session->userdata('user_id'),
+            'email' => $this->session->userdata('user_email'),
+            'name' => $this->session->userdata('user_name')
+        ];
     }
       public function get_all($page = 1)
     {
@@ -57,7 +90,8 @@ class StudentsController extends Controller
             'pagination_data' => $pagination_data,
             'pagination_links' => $this->pagination->paginate(),
             'search' => $search,
-            'show_deleted' => $show_deleted
+            'show_deleted' => $show_deleted,
+            'current_user' => $this->get_current_user()
         ];
 
         $this->call->view('ui/get_all', $data);
@@ -80,7 +114,7 @@ class StudentsController extends Controller
             $this->StudentsModel->insert($data);
             redirect('users/get-all');
         }
-        $this->call->view('ui/create');
+        $this->call->view('ui/create', ['current_user' => $this->get_current_user()]);
     }
 
     public function update($id)
@@ -95,7 +129,7 @@ class StudentsController extends Controller
             $this->StudentsModel->update($id, $data);
             redirect('users/get-all');
         }
-        $this->call->view('ui/update', ['user' => $user]);
+        $this->call->view('ui/update', ['user' => $user, 'current_user' => $this->get_current_user()]);
     }
 
     public function delete($id)

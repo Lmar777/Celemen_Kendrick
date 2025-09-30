@@ -5,6 +5,66 @@ body {
     color: #F0EAD6;
 }
 
+/* User Header Styles */
+.user-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #C5A880;
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 2px solid #701C1C;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    color: #701C1C;
+}
+
+.user-info span {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.user-email {
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    color: #8B4513;
+    margin-top: 2px;
+}
+
+.btn-logout {
+    background-color: #701C1C !important;
+    color: #F0EAD6 !important;
+    padding: 10px 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: 2px solid #8B0000;
+    transition: all 0.3s ease;
+}
+
+.btn-logout:hover {
+    background-color: #8B0000 !important;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design for User Header */
+@media (max-width: 768px) {
+    .user-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+    
+    .user-info {
+        align-items: center;
+    }
+}
+
 h2 {
     color: #F0EAD6;
     margin-bottom: 12px;

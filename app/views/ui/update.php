@@ -8,6 +8,17 @@
 </head>
 
 <body>
+  <!-- User Header with Logout -->
+  <div class="user-header">
+    <div class="user-info">
+      <span>Welcome, <?= htmlspecialchars($current_user['name']) ?></span>
+      <span class="user-email">(<?= htmlspecialchars($current_user['email']) ?>)</span>
+    </div>
+    <a href="<?= base_url() ?>logout" class="btn btn-logout" onclick="return confirm('Are you sure you want to logout?')">
+      Logout
+    </a>
+  </div>
+
   <h1>Update Student</h1>
   <form method="post" action="/users/update/<?= $user['id'] ?>">
     <label>First Name:</label>
