@@ -3,8 +3,8 @@
 
 <head>
   <title>Update Student</title>
-  <link rel="stylesheet" href="<?= base_url() ?>public/css/style.css">
-  <link rel="stylesheet" href="<?= base_url() ?>public/css/update.css">
+  <link rel="stylesheet" href="../../../public/css/style.css">
+  <link rel="stylesheet" href="../../../public/css/update.css">
 </head>
 
 <body>

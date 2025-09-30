@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Students List</title>
-    <link rel="stylesheet" href="<?= base_url() ?>public/css/get_all.css">
+    <link rel="stylesheet" href="../../../public/css/get_all.css">
 </head>
 
 <body>
