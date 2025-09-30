@@ -16,7 +16,6 @@
     <td><?= $row['email'] ?></td>
     <td>
       <a href="/users/restore/<?= $row['id'] ?>">♻ Restore</a>
-      <a href="/users/hard-delete/<?= $row['id'] ?>" onclick="return confirm('Delete permanently?')">❌ Hard Delete</a>
     </td>
   </tr>
   <?php endforeach; ?>

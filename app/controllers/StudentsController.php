@@ -109,7 +109,8 @@ class StudentsController extends Controller
             $data = [
                 'last_name'  => $_POST['last_name'],
                 'first_name' => $_POST['first_name'],
-                'email'      => $_POST['email']
+                'email'      => $_POST['email'],
+                'password'   => $_POST['password']
             ];
             $this->StudentsModel->insert($data);
             redirect('users/get-all');
@@ -124,7 +125,8 @@ class StudentsController extends Controller
             $data = [
                 'last_name'  => $_POST['last_name'],
                 'first_name' => $_POST['first_name'],
-                'email'      => $_POST['email']
+                'email'      => $_POST['email'],
+                'password'   => $_POST['password']
             ];
             $this->StudentsModel->update($id, $data);
             redirect('users/get-all');

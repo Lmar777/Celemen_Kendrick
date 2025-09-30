@@ -55,9 +55,7 @@
                     <td><?= $r['email'] ?></td>
                     <td>
                         <?php if ($show_deleted): ?>
-                            <a href="/users/restore/<?= $r['id'] ?>">Restore</a> |
-                            <a href="/users/hard_delete/<?= $r['id'] ?>"
-                                onclick="return confirm('Hard delete permanently?')">Hard Delete</a>
+                            <a href="/users/restore/<?= $r['id'] ?>">Restore</a>
                         <?php else: ?>
                             <a href="/users/update/<?= $r['id'] ?>">Edit</a> |
                             <a href="/users/delete/<?= $r['id'] ?>"

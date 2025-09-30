@@ -8,7 +8,7 @@ defined('PREVENT_DIRECT_ACCESS') or exit('No direct script access allowed');
  */
 class StudentsModel extends Model
 {
-    protected $table = 'students';
+    protected $table = 'mockdata';
     protected $primary_key = 'id';
 
     public function __construct()

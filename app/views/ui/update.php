@@ -22,11 +22,13 @@
   <h1>Update Student</h1>
   <form method="post" action="/users/update/<?= $user['id'] ?>">
     <label>First Name:</label>
-    <input type="text" name="first_name" value="<?= $user['first_name'] ?>"><br>
+    <input type="text" name="first_name" value="<?= htmlspecialchars($user['first_name']) ?>" required><br>
     <label>Last Name:</label>
-    <input type="text" name="last_name" value="<?= $user['last_name'] ?>"><br>
+    <input type="text" name="last_name" value="<?= htmlspecialchars($user['last_name']) ?>" required><br>
     <label>Email:</label>
-    <input type="email" name="email" value="<?= $user['email'] ?>"><br>
+    <input type="email" name="email" value="<?= htmlspecialchars($user['email']) ?>" required><br>
+    <label>Password:</label>
+    <input type="password" name="password" value="<?= htmlspecialchars($user['password']) ?>" required><br>
     <button type="submit">Update</button>
   </form>
   <a href="/users">⬅ Back</a>
