@@ -3,8 +3,8 @@
 
 <head>
   <title>Create Student</title>
-  <link rel="stylesheet" href="../../../public/css/style.css">
-  <link rel="stylesheet" href="../../../public/css/create.css">
+  <link rel="stylesheet" href="<?= base_url() ?>public/css/style.css">
+  <link rel="stylesheet" href="<?= base_url() ?>public/css/create.css">
 </head>
 
 <body>
