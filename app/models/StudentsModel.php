@@ -110,4 +110,33 @@ public function hard_delete($id): ?bool
     $stmt = $this->db->raw($sql, [$id]);
     return $stmt->rowCount() > 0 ? true : null;
 }
+
+/* =========================
+ * AUTHENTICATION METHODS
+ * ========================= */
+public function find_by_email($email)
+{
+    if (empty($email)) return null;
+    $sql = "SELECT * FROM {$this->table} WHERE email = ? AND {$this->soft_delete_column} IS NULL LIMIT 1";
+    $result = $this->db->raw($sql, [$email])->fetch(PDO::FETCH_ASSOC);
+    return $result ?: null;
+}
+
+public function verify_password($password, $stored_password)
+{
+    return $password === $stored_password;
+}
+
+public function create_student($data)
+{
+    return $this->insert($data);
+}
+
+public function email_exists($email)
+{
+    if (empty($email)) return false;
+    $sql = "SELECT COUNT(*) as count FROM {$this->table} WHERE email = ? AND {$this->soft_delete_column} IS NULL";
+    $result = $this->db->raw($sql, [$email])->fetch(PDO::FETCH_ASSOC);
+    return $result['count'] > 0;
+}
 }
