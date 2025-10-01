@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Student Management System</title>
-    <link rel="stylesheet" href="<?= base_url() ?>public/css/style.css">
-    <link rel="stylesheet" href="<?= base_url() ?>public/css/login.css">
+    <link rel="stylesheet" href="../../public/css/style.css">
+    <link rel="stylesheet" href="../../public/css/login.css">
 </head>
 <body>
     <div class="login-container">
@@ -57,7 +57,7 @@
             </form>
 
             <div class="forgot-password">
-                <a href="<?= base_url() ?>register">Don't have an account? Register here</a>
+                <a href="register">Don't have an account? Register here</a>
             </div>
         </div>
     </div>
