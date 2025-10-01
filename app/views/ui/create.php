@@ -27,7 +27,7 @@
     <label>Password:</label><input type="password" name="password" required><br>
     <button type="submit">Save</button>
   </form>
-  <a href="/users">⬅ Back</a>
+  <a href="<?= base_url() ?>users">⬅ Back</a>
 </body>
 
 </html>
