@@ -14,7 +14,7 @@
             <span>Welcome, <?= htmlspecialchars($current_user['name']) ?></span>
             <span class="user-email">(<?= htmlspecialchars($current_user['email']) ?>)</span>
         </div>
-        <a href="<?= base_url() ?>logout" class="btn btn-logout" onclick="return confirm('Are you sure you want to logout?')">
+        <a href="logout" class="btn btn-logout" onclick="return confirm('Are you sure you want to logout?')">
             Logout
         </a>
     </div>
@@ -22,15 +22,15 @@
     <h2><?= $show_deleted ? 'Deleted Students' : 'Active Students' ?></h2>
     
     <div class= "student-count">
-        <a class="btn btn-primary" href="<?= base_url() . 'users/create' ?>">
+        <a class="btn btn-primary" href="users/create">
         <span>Add New Student</span>
         </a>
     </div>
 
-    <a href="/users/get-all" class="btn">Show Active</a>
-    <a href="/users/get-all?show=deleted" class="btn">Show Deleted</a>
+    <a href="users/get-all" class="btn">Show Active</a>
+    <a href="users/get-all?show=deleted" class="btn">Show Deleted</a>
 
-    <form method="get" action="/users/get-all">
+    <form method="get" action="users/get-all">
         <?php if ($show_deleted): ?>
             <input type="hidden" name="show" value="deleted">
         <?php endif; ?>
@@ -55,10 +55,10 @@
                     <td><?= $r['email'] ?></td>
                     <td>
                         <?php if ($show_deleted): ?>
-                            <a href="/users/restore/<?= $r['id'] ?>">Restore</a>
+                            <a href="users/restore/<?= $r['id'] ?>">Restore</a>
                         <?php else: ?>
-                            <a href="/users/update/<?= $r['id'] ?>">Edit</a> |
-                            <a href="/users/delete/<?= $r['id'] ?>"
+                            <a href="users/update/<?= $r['id'] ?>">Edit</a> |
+                            <a href="users/delete/<?= $r['id'] ?>"
                                 onclick="return confirm('Soft delete this student?')">Delete</a>
                         <?php endif; ?>
                     </td>

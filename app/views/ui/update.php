@@ -20,7 +20,7 @@
   </div>
 
   <h1>Update Student</h1>
-  <form method="post" action="/users/update/<?= $user['id'] ?>">
+  <form method="post" action="users/update/<?= $user['id'] ?>">
     <label>First Name:</label>
     <input type="text" name="first_name" value="<?= htmlspecialchars($user['first_name']) ?>" required><br>
     <label>Last Name:</label>
@@ -31,7 +31,7 @@
     <input type="password" name="password" value="<?= htmlspecialchars($user['password']) ?>" required><br>
     <button type="submit">Update</button>
   </form>
-  <a href="/users">⬅ Back</a>
+  <a href="users">⬅ Back</a>
 </body>
 
 </html>
